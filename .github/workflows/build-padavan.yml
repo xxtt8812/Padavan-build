@@ -33,8 +33,8 @@ jobs:
         cd ~
         git clone https://github.com/CoreELEC/CoreELEC.git
         cd CoreELEC
-        git checkout coreelec-20
-        DEVICE=amlogic-ng make image
+        git checkout coreelec-19
+        make image
         sudo mv -f *.img.gz /CoreELEC/target/
     - name : Upload packages
       uses: actions/upload-artifact@master
