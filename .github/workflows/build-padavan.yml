@@ -35,7 +35,6 @@ jobs:
         cd CoreELEC
         git checkout coreelec-19
         make image
-        sudo mv -f *.img.gz /CoreELEC/target/
     - name : Upload packages
       uses: actions/upload-artifact@master
       if: always()
