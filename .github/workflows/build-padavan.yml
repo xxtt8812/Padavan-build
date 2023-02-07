@@ -30,8 +30,8 @@ jobs:
         sudo apt-get install -y make gcc git texinfo gzip squashfs-tools
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/xxtt8812/e900v22c-CoreELEC.git
-        cd /e900v22c-CoreELEC
+        git clone --depth=1 https://github.com/xxtt8812/e900v22c-CoreELEC.git /opt/rt-n56u
+        cd /opt/rt-n56u
         sh build.sh
         mkdir -p /opt/images/
         sudo mv -f *.tar /opt/images/
