@@ -30,10 +30,9 @@ jobs:
         sudo apt-get install -y make gcc git texinfo gzip squashfs-tools
     - name: Clone source code
       run: |
-        cd ~
-        git clone https://github.com/xxtt8812/e900v22c-CoreELEC.git
-        ~/e900v22c-CoreELEC
-        ./build
+        git clone --depth=1 https://github.com/xxtt8812/e900v22c-CoreELEC.git
+        cd /e900v22c-CoreELEC
+        sh build.sh
         mkdir -p /opt/images/
         sudo mv -f *.tar /opt/images/
     - name : Upload packages
